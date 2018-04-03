@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createStore} from 'redux';
 
 // main app
 //import App from './components/app';
@@ -8,6 +9,11 @@ import {UploadFile} from './components/app';
 //ReactDOM.render(<App />, document.getElementById('app'))
 ReactDOM.render(<UploadFile onClick={uploadFileHandler}/>, document.getElementById('app'));
 
+const store = createStore(function(){},{})
+
+console.log(store);
+
+store.dispatch({type:"UPLOAD_IMAGE"} );
 
 function uploadFileHandler(){
 
