@@ -28,10 +28,23 @@ function uploadFileHandler(){
         
         break;
     default : alert("Unsupported Format");
+        test(file)
         break
     }
     
 } 
+
+function test(file){
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        debugger
+        document.getElementById('form').src=e.target.result;
+    }
+    
+    reader.readAsDataURL(file);       
+}
 
 function renderImage(file){
 
