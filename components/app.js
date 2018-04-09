@@ -1,7 +1,13 @@
-import React, {Component} from 'react';
+import React,{propTypes} from 'react';
 
-export default class App extends Component {
-    render () {
-        return <p>This is my new react app</p>
-    }
+
+export function TopHeader(){
+    return (
+            <div className="topHeader">
+            
+            <img src="img/logo.png" />
+            
+            </div>
+            
+    )
 }

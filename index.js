@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// main app
-import App from './components/app';
+import {TopHeader} from './components/app';
 
-ReactDOM.render(<App />, document.getElementById('app'))
+document.addEventListener("DOMContentLoaded", function(event) {
+    // Your code to run since DOM is loaded and ready
+    ReactDOM.render(<TopHeader />, document.getElementById('topHeader'))
+
+});
+
